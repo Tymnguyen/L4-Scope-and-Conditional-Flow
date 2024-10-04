@@ -1,172 +1,542 @@
-﻿//---------------------------------------------------------------------
-// Question 1: Basic Switch Case
-// Write a C# program that prompts the user to enter a number between 1 and 3. Using a switch-case statement,
-// display a message based on the number entered. If the number is 1, print "One"; if the number is 2, print "Two"; if the number is 3, print "Three".
-// If the number does not match any of these, display a default message.
-// Hint: Use Console.ReadLine() to get user input and Convert.ToInt32() to convert the input to an integer.
+﻿using System;
 
-//---------------------------------------------------------------------
-// Question 2: Game Character Selection
-// In a game, the player can select a character class using numbers 1 to 3.
-// Write a C# program that prompts the player to choose a character class.
-// Based on the chosen number, display a message indicating the selected class: 1 for Warrior, 2 for Mage, and 3 for Archer.
-// If the number does not match any of these, display a default message.
-// Hint: Utilize switch-case statements to handle different cases of character selection.
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Question 1: Basic Switch Case
+        Console.WriteLine("Enter a number between 1 and 3:");
+        int number = Convert.ToInt32(Console.ReadLine());
+        switch (number)
+        {
+            case 1:
+                Console.WriteLine("One");
+                break;
+            case 2:
+                Console.WriteLine("Two");
+                break;
+            case 3:
+                Console.WriteLine("Three");
+                break;
+            default:
+                Console.WriteLine("Invalid number");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 3: Directional Movement
-// In a game, the player can move in four cardinal directions: North, South, East, and West.
-// Write a C# program that prompts the player to enter a direction using numbers 1 to 4.
-// Based on the chosen number, display a message indicating the direction: 1 for North, 2 for South, 3 for East, and 4 for West.
-// If the number does not match any of these, display a default message.
-// Hint: Implement a switch-case statement to handle different directional inputs.
+        // Question 2: Game Character Selection
+        Console.WriteLine("\nChoose a character class (1-Warrior, 2-Mage, 3-Archer):");
+        int characterClass = Convert.ToInt32(Console.ReadLine());
+        switch (characterClass)
+        {
+            case 1:
+                Console.WriteLine("You chose Warrior");
+                break;
+            case 2:
+                Console.WriteLine("You chose Mage");
+                break;
+            case 3:
+                Console.WriteLine("You chose Archer");
+                break;
+            default:
+                Console.WriteLine("Invalid class");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 4: Day of the Week
-// Write a C# program that prompts the user to enter a number between 1 and 7 representing a day of the week.
-// Use a switch-case statement to display the name of the corresponding day.
-// For example, if the user enters 1, print "Monday"; if 2, print "Tuesday", and so on. If the number does not match any of these, display a default message.
-// Hint: Map each number input to a specific day of the week using a switch-case statement.
+        // Question 3: Directional Movement
+        Console.WriteLine("\nChoose a direction (1-North, 2-South, 3-East, 4-West):");
+        int direction = Convert.ToInt32(Console.ReadLine());
+        switch (direction)
+        {
+            case 1:
+                Console.WriteLine("Moving North");
+                break;
+            case 2:
+                Console.WriteLine("Moving South");
+                break;
+            case 3:
+                Console.WriteLine("Moving East");
+                break;
+            case 4:
+                Console.WriteLine("Moving West");
+                break;
+            default:
+                Console.WriteLine("Invalid direction");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 5: Weapon Selection
-// In a game, the player can select a weapon using numbers 1 to 4.
-// Write a C# program that prompts the player to choose a weapon. Based on the chosen number, display a message indicating the selected weapon: 1 for Sword, 2 for Bow, 3 for Staff, and 4 for Axe.
-// If the number does not match any of these, display a default message.
-// Hint: Use switch-case statements to handle different weapon choices.
+        // Question 4: Day of the Week
+        Console.WriteLine("\nEnter a number between 1 and 7 for the day of the week:");
+        int day = Convert.ToInt32(Console.ReadLine());
+        switch (day)
+        {
+            case 1:
+                Console.WriteLine("Monday");
+                break;
+            case 2:
+                Console.WriteLine("Tuesday");
+                break;
+            case 3:
+                Console.WriteLine("Wednesday");
+                break;
+            case 4:
+                Console.WriteLine("Thursday");
+                break;
+            case 5:
+                Console.WriteLine("Friday");
+                break;
+            case 6:
+                Console.WriteLine("Saturday");
+                break;
+            case 7:
+                Console.WriteLine("Sunday");
+                break;
+            default:
+                Console.WriteLine("Invalid day");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 6: Elemental Magic
-// In a fantasy game, the player can cast elemental magic spells using numbers 1 to 5.
-// Write a C# program that prompts the player to select a magic spell. Based on the chosen number, display a message indicating the selected spell element: 1 for Fire, 2 for Water, 3 for Earth, 4 for Air, and 5 for Lightning.
-// If the number does not match any of these, display a default message.
-// Hint: Implement a switch-case statement to handle different spell selections.
+        // Question 5: Weapon Selection
+        Console.WriteLine("\nChoose a weapon (1-Sword, 2-Bow, 3-Staff, 4-Axe):");
+        int weapon = Convert.ToInt32(Console.ReadLine());
+        switch (weapon)
+        {
+            case 1:
+                Console.WriteLine("You chose Sword");
+                break;
+            case 2:
+                Console.WriteLine("You chose Bow");
+                break;
+            case 3:
+                Console.WriteLine("You chose Staff");
+                break;
+            case 4:
+                Console.WriteLine("You chose Axe");
+                break;
+            default:
+                Console.WriteLine("Invalid weapon");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 7: Menu Navigation
-// Write a C# program that simulates a menu navigation system for a game.
-// The user can enter numbers 1 to 4 to navigate through different menu options: 1 for Start Game, 2 for Options, 3 for Load Game, and 4 for Exit.
-// If the number does not match any of these, display a default message.
-// Hint: Utilize switch-case statements to handle user input and navigate between menu options.
+        // Question 6: Elemental Magic
+        Console.WriteLine("\nChoose a magic spell (1-Fire, 2-Water, 3-Earth, 4-Air, 5-Lightning):");
+        int spell = Convert.ToInt32(Console.ReadLine());
+        switch (spell)
+        {
+            case 1:
+                Console.WriteLine("You cast Fire");
+                break;
+            case 2:
+                Console.WriteLine("You cast Water");
+                break;
+            case 3:
+                Console.WriteLine("You cast Earth");
+                break;
+            case 4:
+                Console.WriteLine("You cast Air");
+                break;
+            case 5:
+                Console.WriteLine("You cast Lightning");
+                break;
+            default:
+                Console.WriteLine("Invalid spell");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 8: NPC Interaction
-// In an RPG game, the player can interact with non-player characters (NPCs) using numbers 1 to 3.
-// Write a C# program that prompts the player to choose an interaction option with an NPC. Based on the chosen number, display a message indicating the selected interaction: 1 for Talk, 2 for Trade, and 3 for Quest.
-// If the number does not match any of these, display a default message.
-// Hint: Implement a switch-case statement to handle different interaction options with NPCs.
+        // Question 7: Menu Navigation
+        Console.WriteLine("\nNavigate the menu (1-Start Game, 2-Options, 3-Load Game, 4-Exit):");
+        int menuOption = Convert.ToInt32(Console.ReadLine());
+        switch (menuOption)
+        {
+            case 1:
+                Console.WriteLine("Starting Game...");
+                break;
+            case 2:
+                Console.WriteLine("Opening Options...");
+                break;
+            case 3:
+                Console.WriteLine("Loading Game...");
+                break;
+            case 4:
+                Console.WriteLine("Exiting...");
+                break;
+            default:
+                Console.WriteLine("Invalid option");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 9: Puzzle Solutions
-// In a puzzle-solving game, the player can choose from different solutions using numbers 1 to 5.
-// Write a C# program that prompts the player to select a solution for a puzzle. Based on the chosen number, display a message indicating the selected solution option.
-// If the number does not match any of these, display a default message.
-// Hint: Use switch-case statements to handle different puzzle solution choices.
+        // Question 8: NPC Interaction
+        Console.WriteLine("\nChoose an NPC interaction (1-Talk, 2-Trade, 3-Quest):");
+        int interaction = Convert.ToInt32(Console.ReadLine());
+        switch (interaction)
+        {
+            case 1:
+                Console.WriteLine("You chose to Talk");
+                break;
+            case 2:
+                Console.WriteLine("You chose to Trade");
+                break;
+            case 3:
+                Console.WriteLine("You chose to Quest");
+                break;
+            default:
+                Console.WriteLine("Invalid interaction");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 10: Dialogue Choices
-// Write a C# program that simulates dialogue choices in a game. The player can select dialogue options using numbers 1 to 4.
-// Based on the chosen number, display a message indicating the selected dialogue choice. If the number does not match any of these, display a default message.
-// Hint: Implement switch-case statements to handle different dialogue options presented to the player.
+        // Question 9: Puzzle Solutions
+        Console.WriteLine("\nChoose a solution (1-5):");
+        int solution = Convert.ToInt32(Console.ReadLine());
+        switch (solution)
+        {
+            case 1:
+                Console.WriteLine("Solution 1 selected");
+                break;
+            case 2:
+                Console.WriteLine("Solution 2 selected");
+                break;
+            case 3:
+                Console.WriteLine("Solution 3 selected");
+                break;
+            case 4:
+                Console.WriteLine("Solution 4 selected");
+                break;
+            case 5:
+                Console.WriteLine("Solution 5 selected");
+                break;
+            default:
+                Console.WriteLine("Invalid solution");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 11: Crafting Items
-// In a crafting system, the player can select crafting recipes using numbers 1 to 3.
-// Write a C# program that prompts the player to choose a crafting recipe.
-// Based on the chosen number, display a message indicating the selected recipe: 1 for Potion, 2 for Weapon, and 3 for Armor. If the number does not match any of these, display a default message.
-// Hint: Utilize switch-case statements to handle different crafting recipe selections.
+        // Question 10: Dialogue Choices
+        Console.WriteLine("\nChoose a dialogue option (1-4):");
+        int dialogue = Convert.ToInt32(Console.ReadLine());
+        switch (dialogue)
+        {
+            case 1:
+                Console.WriteLine("You chose dialogue option 1");
+                break;
+            case 2:
+                Console.WriteLine("You chose dialogue option 2");
+                break;
+            case 3:
+                Console.WriteLine("You chose dialogue option 3");
+                break;
+            case 4:
+                Console.WriteLine("You chose dialogue option 4");
+                break;
+            default:
+                Console.WriteLine("Invalid dialogue choice");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 12: Scene Selection
-// Write a C# program that simulates scene selection in a game.
-// The player can choose scenes using numbers 1 to 5. Based on the chosen number, display a message indicating the selected scene.
-// If the number does not match any of these, display a default message.
-// Hint: Implement switch-case statements to handle different scene selections.
+        // Question 11: Crafting Items
+        Console.WriteLine("\nChoose a crafting recipe (1-Potion, 2-Weapon, 3-Armor):");
+        int crafting = Convert.ToInt32(Console.ReadLine());
+        switch (crafting)
+        {
+            case 1:
+                Console.WriteLine("You crafted a Potion");
+                break;
+            case 2:
+                Console.WriteLine("You crafted a Weapon");
+                break;
+            case 3:
+                Console.WriteLine("You crafted Armor");
+                break;
+            default:
+                Console.WriteLine("Invalid crafting option");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 13: Quest Progression
-// In an adventure game, the player can progress through quests using numbers 1 to 4.
-// Write a C# program that prompts the player to select a quest. Based on the chosen number, display a message indicating the selected quest.
-// If the number does not match any of these, display a default message.
-// Hint: Use switch-case statements to handle different quest selections and progression
+        // Question 12: Scene Selection
+        Console.WriteLine("\nChoose a scene (1-5):");
+        int scene = Convert.ToInt32(Console.ReadLine());
+        switch (scene)
+        {
+            case 1:
+                Console.WriteLine("Scene 1 selected");
+                break;
+            case 2:
+                Console.WriteLine("Scene 2 selected");
+                break;
+            case 3:
+                Console.WriteLine("Scene 3 selected");
+                break;
+            case 4:
+                Console.WriteLine("Scene 4 selected");
+                break;
+            case 5:
+                Console.WriteLine("Scene 5 selected");
+                break;
+            default:
+                Console.WriteLine("Invalid scene");
+                break;
+        }
 
+        // Question 13: Quest Progression
+        Console.WriteLine("\nChoose a quest (1-4):");
+        int quest = Convert.ToInt32(Console.ReadLine());
+        switch (quest)
+        {
+            case 1:
+                Console.WriteLine("Quest 1 selected");
+                break;
+            case 2:
+                Console.WriteLine("Quest 2 selected");
+                break;
+            case 3:
+                Console.WriteLine("Quest 3 selected");
+                break;
+            case 4:
+                Console.WriteLine("Quest 4 selected");
+                break;
+            default:
+                Console.WriteLine("Invalid quest");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 14: Potion Brewing
-// In an alchemy system, the player can brew potions using numbers 1 to 3.
-// Write a C# program that prompts the player to choose a potion to brew. Based on the chosen number, display a message indicating the selected potion: 1 for Health Potion, 2 for Mana Potion, and 3 for Stamina Potion.
-// If the number does not match any of these, display a default message.
-// Hint: Implement switch-case statements to handle different potion brewing choices.
+        // Question 14: Potion Brewing
+        Console.WriteLine("\nChoose a potion to brew (1-Health Potion, 2-Mana Potion, 3-Stamina Potion):");
+        int potion = Convert.ToInt32(Console.ReadLine());
+        switch (potion)
+        {
+            case 1:
+                Console.WriteLine("You brewed a Health Potion");
+                break;
+            case 2:
+                Console.WriteLine("You brewed a Mana Potion");
+                break;
+            case 3:
+                Console.WriteLine("You brewed a Stamina Potion");
+                break;
+            default:
+                Console.WriteLine("Invalid potion");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 15: Platform Movement
-// In a platformer game, the player can move the character using numbers 1 to 4 for directional controls.
-// Write a C# program that prompts the player to enter a movement direction. Based on the chosen number, display a message indicating the movement direction: 1 for Left, 2 for Right, 3 for Jump, and 4 for Crouch.
-// If the number does not match any of these, display a default message.
-// Hint: Utilize switch-case statements to handle different movement directions, including a default case.
+        // Question 15: Platform Movement
+        Console.WriteLine("\nChoose a movement direction (1-Left, 2-Right, 3-Jump, 4-Crouch):");
+        int movement = Convert.ToInt32(Console.ReadLine());
+        switch (movement)
+        {
+            case 1:
+                Console.WriteLine("You moved Left");
+                break;
+            case 2:
+                Console.WriteLine("You moved Right");
+                break;
+            case 3:
+                Console.WriteLine("You Jumped");
+                break;
+            case 4:
+                Console.WriteLine("You Crouched");
+                break;
+            default:
+                Console.WriteLine("Invalid movement");
+                break;
+        }
 
+        // Question 16: Weapon Upgrades
+        Console.WriteLine("\nChoose a material for weapon upgrade (1-Iron, 2-Steel, 3-Gold, 4-Diamond):");
+        int material = Convert.ToInt32(Console.ReadLine());
+        switch (material)
+        {
+            case 1:
+                Console.WriteLine("You upgraded your weapon with Iron");
+                break;
+            case 2:
+                Console.WriteLine("You upgraded your weapon with Steel");
+                break;
+            case 3:
+                Console.WriteLine("You upgraded your weapon with Gold");
+                break;
+            case 4:
+                Console.WriteLine("You upgraded your weapon with Diamond");
+                break;
+            default:
+                Console.WriteLine("Invalid material");
+                break;
+        }
 
-//////////////////////Break Statements//////////////////////
+        // Question 17: Spell Casting
+        Console.WriteLine("\nChoose a spell element (1-Fire, 2-Water, 3-Earth, 4-Air):");
+        int spellElement = Convert.ToInt32(Console.ReadLine());
+        switch (spellElement)
+        {
+            case 1:
+                Console.WriteLine("You cast a Fire spell");
+                break;
+            case 2:
+                Console.WriteLine("You cast a Water spell");
+                break;
+            case 3:
+                Console.WriteLine("You cast an Earth spell");
+                break;
+            case 4:
+                Console.WriteLine("You cast an Air spell");
+                break;
+            default:
+                Console.WriteLine("Invalid spell element");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 16: Weapon Upgrades
-// In a game, the player can upgrade their weapon using different materials.
-// Write a C# program that prompts the player to choose a material for weapon upgrade.
-// Based on the chosen number, display a message indicating the selected material. Use a switch-case statement to handle the different material choices: 1 for Iron, 2 for Steel, 3 for Gold, and 4 for Diamond.
-// After displaying the selected material, include a break statement to terminate the switch-case block.
-// Hint: Implement switch-case statements to handle different material choices and use break statements to exit the switch-case block.
+        // Question 18: Skill Selection
+        Console.WriteLine("\nChoose a skill to enhance (1-Strength, 2-Agility, 3-Intelligence, 4-Vitality):");
+        int skill = Convert.ToInt32(Console.ReadLine());
+        switch (skill)
+        {
+            case 1:
+                Console.WriteLine("You enhanced Strength");
+                break;
+            case 2:
+                Console.WriteLine("You enhanced Agility");
+                break;
+            case 3:
+                Console.WriteLine("You enhanced Intelligence");
+                break;
+            case 4:
+                Console.WriteLine("You enhanced Vitality");
+                break;
+            default:
+                Console.WriteLine("Invalid skill");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 17: Spell Casting
-// In a fantasy game, the player can cast spells using different magic elements.
-// Write a C# program that prompts the player to select a spell element. Based on the chosen number, display a message indicating the selected spell element: 1 for Fire, 2 for Water, 3 for Earth, and 4 for Air.
-// After displaying the selected element, include a break statement to terminate the switch-case block.
-// Hint: Utilize switch-case statements to handle different spell elements and use break statements to exit the switch-case block.
+        // Question 19: Puzzle Solutions
+        Console.WriteLine("\nChoose a puzzle solution (1-5):");
+        int puzzleSolution = Convert.ToInt32(Console.ReadLine());
+        switch (puzzleSolution)
+        {
+            case 1:
+                Console.WriteLine("You chose Solution 1");
+                break;
+            case 2:
+                Console.WriteLine("You chose Solution 2");
+                break;
+            case 3:
+                Console.WriteLine("You chose Solution 3");
+                break;
+            case 4:
+                Console.WriteLine("You chose Solution 4");
+                break;
+            case 5:
+                Console.WriteLine("You chose Solution 5");
+                break;
+            default:
+                Console.WriteLine("Invalid solution choice");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 18: Skill Selection
-// In a role-playing game (RPG), the player can choose skills to improve their character's abilities.
-// Write a C# program that prompts the player to select a skill for enhancement. Based on the chosen number, display a message indicating the selected skill: 1 for Strength, 2 for Agility, 3 for Intelligence, and 4 for Vitality.
-// After displaying the selected skill, include a break statement to terminate the switch-case block.
-// Hint: Implement switch-case statements to handle different skill selections and use break statements to exit the switch-case block.
+        // Question 20: Potion Brewing
+        Console.WriteLine("\nChoose an ingredient for potion brewing (1-Herb, 2-Mushroom, 3-Flower, 4-Crystal):");
+        int potionIngredient = Convert.ToInt32(Console.ReadLine());
+        switch (potionIngredient)
+        {
+            case 1:
+                Console.WriteLine("You used Herb to brew a potion.");
+                break;
+            case 2:
+                Console.WriteLine("You used Mushroom to brew a potion.");
+                break;
+            case 3:
+                Console.WriteLine("You used Flower to brew a potion.");
+                break;
+            case 4:
+                Console.WriteLine("You used Crystal to brew a potion.");
+                break;
+            default:
+                Console.WriteLine("Invalid ingredient choice");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 19: Puzzle Solutions
-// In a puzzle-solving game, the player can choose from different solutions to progress through the game.
-// Write a C# program that prompts the player to select a solution for a puzzle. Based on the chosen number, display a message indicating the selected solution option.
-// After displaying the selected solution, include a break statement to terminate the switch-case block.
-// Hint: Use switch-case statements to handle different puzzle solution choices and use break statements to exit the switch-case block.
+        // Question 21: NPC Interactions
+        Console.WriteLine("\nChoose an NPC interaction (1-Talk, 2-Trade, 3-Quest):");
+        int npcInteraction = Convert.ToInt32(Console.ReadLine());
+        switch (npcInteraction)
+        {
+            case 1:
+                Console.WriteLine("You chose to Talk with the NPC.");
+                break;
+            case 2:
+                Console.WriteLine("You chose to Trade with the NPC.");
+                break;
+            case 3:
+                Console.WriteLine("You chose to receive a Quest from the NPC.");
+                break;
+            default:
+                Console.WriteLine("Invalid NPC interaction choice.");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 20: Potion Brewing
-// In an alchemy system, the player can brew potions using different ingredients.
-// Write a C# program that prompts the player to choose an ingredient for potion brewing. Based on the chosen number, display a message indicating the selected ingredient: 1 for Herb, 2 for Mushroom, 3 for Flower, and 4 for Crystal.
-// After displaying the selected ingredient, include a break statement to terminate the switch-case block.
-// Hint: Implement switch-case statements to handle different ingredient choices and use break statements to exit the switch-case block.
+        // Question 22: Scene Navigation
+        Console.WriteLine("\nChoose a scene to navigate (1-5):");
+        int sceneSelection = Convert.ToInt32(Console.ReadLine());
+        switch (sceneSelection)
+        {
+            case 1:
+                Console.WriteLine("You navigated to Scene 1.");
+                break;
+            case 2:
+                Console.WriteLine("You navigated to Scene 2.");
+                break;
+            case 3:
+                Console.WriteLine("You navigated to Scene 3.");
+                break;
+            case 4:
+                Console.WriteLine("You navigated to Scene 4.");
+                break;
+            case 5:
+                Console.WriteLine("You navigated to Scene 5.");
+                break;
+            default:
+                Console.WriteLine("Invalid scene choice.");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 21: NPC Interactions
-// In a game world, the player can interact with non-player characters (NPCs) in various ways.
-// Write a C# program that simulates NPC interactions based on player input. Prompt the player to choose an interaction option with an NPC using numbers 1 to 3: 1 for Talk, 2 for Trade, and 3 for Quest.
-// After displaying the selected interaction, include a break statement to terminate the switch-case block.
-// Hint: Utilize switch-case statements to handle different NPC interaction options and use break statements to exit the switch-case block.
+        // Question 23: Quest Progression
+        Console.WriteLine("\nChoose a quest option to progress (1-4):");
+        int questProgression = Convert.ToInt32(Console.ReadLine());
+        switch (questProgression)
+        {
+            case 1:
+                Console.WriteLine("You progressed in Quest 1.");
+                break;
+            case 2:
+                Console.WriteLine("You progressed in Quest 2.");
+                break;
+            case 3:
+                Console.WriteLine("You progressed in Quest 3.");
+                break;
+            case 4:
+                Console.WriteLine("You progressed in Quest 4.");
+                break;
+            default:
+                Console.WriteLine("Invalid quest progression choice.");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 22: Scene Navigation
-// Write a C# program that simulates scene navigation in a game.
-// The player can choose scenes using numbers 1 to 5 to navigate through different game environments.
-// After displaying the selected scene, include a break statement to terminate the switch-case block.
-// Hint: Implement switch-case statements to handle different scene selections and use break statements to exit the switch-case block.
+        // Question 24: Menu Navigation
+        Console.WriteLine("\nChoose a menu option (1-Start, 2-Options, 3-Load Game, 4-Exit):");
+        int menuNavigation = Convert.ToInt32(Console.ReadLine());
+        switch (menuNavigation)
+        {
+            case 1:
+                Console.WriteLine("Game started.");
+                break;
+            case 2:
+                Console.WriteLine("Options menu opened.");
+                break;
+            case 3:
+                Console.WriteLine("Game loading...");
+                break;
+            case 4:
+                Console.WriteLine("Exiting game...");
+                break;
+            default:
+                Console.WriteLine("Invalid menu option.");
+                break;
+        }
 
-//---------------------------------------------------------------------
-// Question 23: Quest Progression
-// In an adventure game, the player can progress through quests using different options.
-// Write a C# program that prompts the player to select a quest option. After displaying the selected quest option, include a break statement to terminate the switch-case block.
-// Hint: Use switch-case statements to handle different quest options and use break statements to exit the switch-case block.
-
-//---------------------------------------------------------------------
-// Question 24: Menu Navigation
-// Write a C# program that simulates menu navigation in a game.
-// The player can navigate through menu options using numbers 1 to 4: 1 for Start, 2 for Options, 3 for Load Game, and 4 for Exit.
-// After displaying the selected menu option, include a break statement to terminate the switch-case block.
-// Hint: Utilize switch-case statements to handle different menu options and use break statements to exit the switch-case block.
+    }
+}
